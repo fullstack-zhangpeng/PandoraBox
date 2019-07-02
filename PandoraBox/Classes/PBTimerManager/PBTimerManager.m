@@ -1,6 +1,6 @@
 //
 //  PBTimerManager.m
-//  PandoraBox_Example
+//  PandoraBox
 //
 //  Created by 张鹏 on 2019/6/19.
 //  Copyright © 2019 zhangpeng. All rights reserved.
