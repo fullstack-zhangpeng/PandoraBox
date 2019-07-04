@@ -20,6 +20,10 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6EC3A0DA22CE549600C5BEE6 /* UITextField+PBPlaceholderText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0D922CE549600C5BEE6 /* UITextField+PBPlaceholderText.m */; };
+		6EC3A0E122CE558000C5BEE6 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0DB22CE557F00C5BEE6 /* BaseTabBarController.m */; };
+		6EC3A0E222CE558000C5BEE6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0DC22CE557F00C5BEE6 /* BaseViewController.m */; };
+		6EC3A0E322CE558000C5BEE6 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0DD22CE558000C5BEE6 /* BaseNavigationController.m */; };
 		6FC5FB12A28491086BB17409 /* Pods_PandoraBox_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8593F23E630E0765CDA64A /* Pods_PandoraBox_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -59,6 +63,14 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		60E7C315783BD1F9D9CC3E19 /* Pods-PandoraBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandoraBox_Example.release.xcconfig"; path = "Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example.release.xcconfig"; sourceTree = "<group>"; };
 		643BC45185E5E46B7EEB7CA0 /* PandoraBox.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PandoraBox.podspec; path = ../PandoraBox.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6EC3A0D822CE549600C5BEE6 /* UITextField+PBPlaceholderText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+PBPlaceholderText.h"; sourceTree = "<group>"; };
+		6EC3A0D922CE549600C5BEE6 /* UITextField+PBPlaceholderText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PBPlaceholderText.m"; sourceTree = "<group>"; };
+		6EC3A0DB22CE557F00C5BEE6 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		6EC3A0DC22CE557F00C5BEE6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6EC3A0DD22CE558000C5BEE6 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		6EC3A0DE22CE558000C5BEE6 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		6EC3A0DF22CE558000C5BEE6 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		6EC3A0E022CE558000C5BEE6 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74B21AF2D4AB3004F95A8B3B /* Pods-PandoraBox_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandoraBox_Example.debug.xcconfig"; path = "Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		78FC2B8F34A49C63742F087B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -132,14 +144,17 @@
 		6003F593195388D20070C39A /* Example for PandoraBox */ = {
 			isa = PBXGroup;
 			children = (
+				6EC3A0E522CE559200C5BEE6 /* BaseClass */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F59C195388D20070C39A /* PBAppDelegate.h */,
 				6003F59D195388D20070C39A /* PBAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* PBViewController.h */,
 				6003F5A6195388D20070C39A /* PBViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				6EC3A0D822CE549600C5BEE6 /* UITextField+PBPlaceholderText.h */,
+				6EC3A0D922CE549600C5BEE6 /* UITextField+PBPlaceholderText.m */,
 			);
 			name = "Example for PandoraBox";
 			path = PandoraBox;
@@ -183,6 +198,19 @@
 				78FC2B8F34A49C63742F087B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		6EC3A0E522CE559200C5BEE6 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				6EC3A0DF22CE558000C5BEE6 /* BaseNavigationController.h */,
+				6EC3A0DD22CE558000C5BEE6 /* BaseNavigationController.m */,
+				6EC3A0DE22CE558000C5BEE6 /* BaseTabBarController.h */,
+				6EC3A0DB22CE557F00C5BEE6 /* BaseTabBarController.m */,
+				6EC3A0E022CE558000C5BEE6 /* BaseViewController.h */,
+				6EC3A0DC22CE557F00C5BEE6 /* BaseViewController.m */,
+			);
+			path = BaseClass;
 			sourceTree = "<group>";
 		};
 		E4C2A95F7D9F44B1B639456F /* Pods */ = {
@@ -365,6 +393,10 @@
 			files = (
 				6003F59E195388D20070C39A /* PBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PBViewController.m in Sources */,
+				6EC3A0DA22CE549600C5BEE6 /* UITextField+PBPlaceholderText.m in Sources */,
+				6EC3A0E322CE558000C5BEE6 /* BaseNavigationController.m in Sources */,
+				6EC3A0E122CE558000C5BEE6 /* BaseTabBarController.m in Sources */,
+				6EC3A0E222CE558000C5BEE6 /* BaseViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

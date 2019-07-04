@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (IBAction)clickStartButton:(id)sender {
