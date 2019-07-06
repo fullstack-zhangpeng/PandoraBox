@@ -20,7 +20,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6EC3A0DA22CE549600C5BEE6 /* UITextField+PBPlaceholderText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0D922CE549600C5BEE6 /* UITextField+PBPlaceholderText.m */; };
 		6EC3A0E122CE558000C5BEE6 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0DB22CE557F00C5BEE6 /* BaseTabBarController.m */; };
 		6EC3A0E222CE558000C5BEE6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0DC22CE557F00C5BEE6 /* BaseViewController.m */; };
 		6EC3A0E322CE558000C5BEE6 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3A0DD22CE558000C5BEE6 /* BaseNavigationController.m */; };
@@ -63,8 +62,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		60E7C315783BD1F9D9CC3E19 /* Pods-PandoraBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandoraBox_Example.release.xcconfig"; path = "Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example.release.xcconfig"; sourceTree = "<group>"; };
 		643BC45185E5E46B7EEB7CA0 /* PandoraBox.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PandoraBox.podspec; path = ../PandoraBox.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6EC3A0D822CE549600C5BEE6 /* UITextField+PBPlaceholderText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+PBPlaceholderText.h"; sourceTree = "<group>"; };
-		6EC3A0D922CE549600C5BEE6 /* UITextField+PBPlaceholderText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PBPlaceholderText.m"; sourceTree = "<group>"; };
 		6EC3A0DB22CE557F00C5BEE6 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		6EC3A0DC22CE557F00C5BEE6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		6EC3A0DD22CE558000C5BEE6 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
@@ -153,8 +150,6 @@
 				6003F5A5195388D20070C39A /* PBViewController.h */,
 				6003F5A6195388D20070C39A /* PBViewController.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				6EC3A0D822CE549600C5BEE6 /* UITextField+PBPlaceholderText.h */,
-				6EC3A0D922CE549600C5BEE6 /* UITextField+PBPlaceholderText.m */,
 			);
 			name = "Example for PandoraBox";
 			path = PandoraBox;
@@ -235,7 +230,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				FF71569CFA138E7454F22B93 /* [CP] Embed Pods Frameworks */,
+				596A28229CDFF8E469DEDD1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +339,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		596A28229CDFF8E469DEDD1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PandoraBox/PandoraBox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PandoraBox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A1165DB5EC936921B164C221 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,24 +379,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF71569CFA138E7454F22B93 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PandoraBox/PandoraBox.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PandoraBox.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandoraBox_Example/Pods-PandoraBox_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -393,7 +388,6 @@
 			files = (
 				6003F59E195388D20070C39A /* PBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PBViewController.m in Sources */,
-				6EC3A0DA22CE549600C5BEE6 /* UITextField+PBPlaceholderText.m in Sources */,
 				6EC3A0E322CE558000C5BEE6 /* BaseNavigationController.m in Sources */,
 				6EC3A0E122CE558000C5BEE6 /* BaseTabBarController.m in Sources */,
 				6EC3A0E222CE558000C5BEE6 /* BaseViewController.m in Sources */,

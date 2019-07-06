@@ -1,5 +1,11 @@
 PODS:
-  - PandoraBox (0.1.0)
+  - PandoraBox (0.1.0):
+    - PandoraBox/Base (= 0.1.0)
+    - PandoraBox/Categories (= 0.1.0)
+    - PandoraBox/PBTimerManager (= 0.1.0)
+  - PandoraBox/Base (0.1.0)
+  - PandoraBox/Categories (0.1.0)
+  - PandoraBox/PBTimerManager (0.1.0)
 
 DEPENDENCIES:
   - PandoraBox (from `../`)
@@ -9,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PandoraBox: 67b559e5d83dfa9888a179d4fd79bc43519e2e19
+  PandoraBox: a8fbba5c4106bc8041886069479ae3d065b8514c
 
 PODFILE CHECKSUM: e66a32d57324868b69174a530a7bb1acc77b139b
 

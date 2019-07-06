@@ -7,7 +7,8 @@
 //
 
 #import "PBViewController.h"
-#import <PandoraBox/PBTimerManager.h>
+//#import <PandoraBox/PBTimerManager.h>
+//#import <PandoraBox/PandoraBoxHeader.h>
 
 @interface PBViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -20,31 +21,36 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    NSDictionary *dict = @{
+                           @"key": @"value",
+                           @"obj": @{@"key": @"value"}
+                           };
+    NSLog(@"dict: %@", [dict description]);
 }
 
 - (IBAction)clickStartButton:(id)sender {
-    __weak typeof(self) weakSelf = self;
-    [[PBTimerManager sharedInstance] pb_scheduledTimerWithName:_textField.text interval:1 queue:nil repeat:YES action:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"%@", [NSString stringWithFormat:@"--- %@ %@ ---", [NSThread currentThread], weakSelf.textField.text]);
-        });
-    }];
-    [[PBTimerManager sharedInstance] pb_startTimerWithName:_textField.text];
+//    __weak typeof(self) weakSelf = self;
+//    [[PBTimerManager sharedInstance] pb_scheduledTimerWithName:_textField.text interval:1 queue:nil repeat:YES action:^{
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"%@", [NSString stringWithFormat:@"--- %@ %@ ---", [NSThread currentThread], weakSelf.textField.text]);
+//        });
+//    }];
+//    [[PBTimerManager sharedInstance] pb_startTimerWithName:_textField.text];
 }
 
 - (IBAction)clickStopButton:(id)sender {
-    [[PBTimerManager sharedInstance] pb_stopTimerWithName:_textField.text];
-    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
+//    [[PBTimerManager sharedInstance] pb_stopTimerWithName:_textField.text];
+//    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
 }
 
 - (IBAction)clickSuspendButton:(id)sender {
-    [[PBTimerManager sharedInstance] pb_suspendTimerWithName:_textField.text];
-    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
+//    [[PBTimerManager sharedInstance] pb_suspendTimerWithName:_textField.text];
+//    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
 }
 
 - (IBAction)clickResumeButton:(id)sender {
-    [[PBTimerManager sharedInstance] pb_resumeTimerWithName:_textField.text];
-    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
+//    [[PBTimerManager sharedInstance] pb_resumeTimerWithName:_textField.text];
+//    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
 }
 
 - (void)didReceiveMemoryWarning

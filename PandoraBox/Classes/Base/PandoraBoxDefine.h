@@ -1,13 +1,13 @@
 //
-//  PandoraBoxHeader.h
+//  Header.h
 //  PandoraBox
 //
-//  Created by 张鹏 on 2019/7/4.
+//  Created by 张鹏 on 2019/7/6.
 //  Copyright © 2019 zhangpeng. All rights reserved.
 //
 
-#ifndef PandoraBoxHeader_h
-#define PandoraBoxHeader_h
+#ifndef Header_h
+#define Header_h
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-function"
@@ -20,6 +20,6 @@ static void blockCleanUp(__strong void (^*block)(void))
 #pragma clang diagnostic pop
 
 #define endBlock \
-    __strong void (^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^
+__strong void (^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^
 
-#endif /* PandoraBoxHeader_h */
+#endif /* Header_h */
