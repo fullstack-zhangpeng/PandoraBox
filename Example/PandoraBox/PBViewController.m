@@ -29,28 +29,28 @@
 }
 
 - (IBAction)clickStartButton:(id)sender {
-//    __weak typeof(self) weakSelf = self;
-//    [[PBTimerManager sharedInstance] pb_scheduledTimerWithName:_textField.text interval:1 queue:nil repeat:YES action:^{
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            NSLog(@"%@", [NSString stringWithFormat:@"--- %@ %@ ---", [NSThread currentThread], weakSelf.textField.text]);
-//        });
-//    }];
-//    [[PBTimerManager sharedInstance] pb_startTimerWithName:_textField.text];
+    //    __weak typeof(self) weakSelf = self;
+    //    [[PBTimerManager sharedInstance] pb_scheduledTimerWithName:_textField.text interval:1 queue:nil repeat:YES action:^{
+    //        dispatch_async(dispatch_get_main_queue(), ^{
+    //            NSLog(@"%@", [NSString stringWithFormat:@"--- %@ %@ ---", [NSThread currentThread], weakSelf.textField.text]);
+    //        });
+    //    }];
+    //    [[PBTimerManager sharedInstance] pb_startTimerWithName:_textField.text];
 }
 
 - (IBAction)clickStopButton:(id)sender {
-//    [[PBTimerManager sharedInstance] pb_stopTimerWithName:_textField.text];
-//    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
+    //    [[PBTimerManager sharedInstance] pb_stopTimerWithName:_textField.text];
+    //    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
 }
 
 - (IBAction)clickSuspendButton:(id)sender {
-//    [[PBTimerManager sharedInstance] pb_suspendTimerWithName:_textField.text];
-//    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
+    //    [[PBTimerManager sharedInstance] pb_suspendTimerWithName:_textField.text];
+    //    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
 }
 
 - (IBAction)clickResumeButton:(id)sender {
-//    [[PBTimerManager sharedInstance] pb_resumeTimerWithName:_textField.text];
-//    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
+    //    [[PBTimerManager sharedInstance] pb_resumeTimerWithName:_textField.text];
+    //    NSLog(@"%@", [[PBTimerManager sharedInstance] pb_getAllTimers]);
 }
 
 - (void)didReceiveMemoryWarning
