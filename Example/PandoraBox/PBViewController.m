@@ -7,6 +7,7 @@
 //
 
 #import "PBViewController.h"
+#import <PandoraBox/PBDefine.h>
 //#import <PandoraBox/PBTimerManager.h>
 //#import <PandoraBox/PandoraBoxHeader.h>
 
@@ -20,6 +21,10 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    pb_endBlock {
+        NSLog(@"sss");
+    };
     
     NSDictionary *dict = @{
                            @"key": @"value",

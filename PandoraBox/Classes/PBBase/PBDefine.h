@@ -12,14 +12,14 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-function"
 // void(^block)(void)的指针是void(^*block)(void)
-static void blockCleanUp(__strong void (^*block)(void))
+static void pb_BlockCleanUp(__strong void (^*block)(void))
 {
     (*block)();
 }
 
 #pragma clang diagnostic pop
 
-#define endBlock \
-__strong void (^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^
+#define pb_endBlock \
+__strong void (^block)(void) __attribute__((cleanup(pb_BlockCleanUp), unused)) = ^
 
 #endif /* Header_h */

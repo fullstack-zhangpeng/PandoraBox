@@ -11,24 +11,12 @@
 
 @implementation NSObject (PBRuntime)
 
-/**
- 获取类名
- 
- @param class 相应类
- @return NSString：类名
- */
 + (NSString *)pb_getClassName
 {
     const char *className = class_getName(self);
     return [NSString stringWithUTF8String:className];
 }
 
-/**
- 获取成员变量
- 
- @param class Class
- @return NSArray
- */
 + (NSArray *)pb_getIvarList
 {
     unsigned int count = 0;
@@ -48,12 +36,6 @@
     return [NSArray arrayWithArray:mutableList];
 }
 
-/**
- 获取类的属性列表, 包括私有和公有属性，以及定义在延展中的属性
- 
- @param class Class
- @return 属性列表数组
- */
 + (NSArray *)pb_getPropertyList
 {
     unsigned int count = 0;
@@ -68,12 +50,6 @@
     return [NSArray arrayWithArray:mutableList];
 }
 
-/**
- 获取类的实例方法列表：getter, setter, 对象方法等。但不能获取类方法
- 
- @param class class description
- @return <#return value description#>
- */
 + (NSArray *)pb_getMethodList
 {
     unsigned int count = 0;
@@ -89,12 +65,6 @@
     return [NSArray arrayWithArray:mutableList];
 }
 
-/**
- 获取协议列表
- 
- @param class <#class description#>
- @return <#return value description#>
- */
 + (NSArray *)pb_getProtocolList
 {
     unsigned int count = 0;
@@ -110,4 +80,5 @@
     return [NSArray arrayWithArray:mutableList];
     return nil;
 }
+
 @end

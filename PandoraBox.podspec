@@ -53,13 +53,14 @@ Pod::Spec.new do |s|
     # Pod 库包含的文件，相对于 *.podspec 的路径
     # s.source_files = 'PandoraBox/Classes/**/*'
     
+    # Pod 库中的头文件，在这个属性中声明过的 .h 文件能够使用<>方法联想调用
+    # public_header_files 中的文件，必须在 source_files 中包含
+    # s.public_header_files = 'PandoraBox/Classes/**/*.{h}'
+    
     # Pod 库资源文件
     # s.resource_bundles = {
     #   'PandoraBox' => ['PandoraBox/Assets/*.png']
     # }
-    
-    # Pod 库中的头文件，在这个属性中声明过的 .h 文件能够使用<>方法联想调用
-    s.public_header_files = 'PandoraBox/Classes/*.{h}'
     
     # 需要用到的系统的 .a/.tbd/.dylib 等，比如 libz.dylib, libstdc++.a, libsqlite.a
     # s.libraries = 'z', 'stdc++', 'sqlite'
@@ -75,24 +76,28 @@ Pod::Spec.new do |s|
     # s.dependency 'AFNetworking', '~> 2.3'
     
     # 默认包含的子库
-    s.default_subspec = 'Base','Categories','PBTimerManager','PBFileTool'
+    s.default_subspec = 'PBBase','PBCategories','PBTimerManager','PBFileTool'
     
     # 子库
-    s.subspec 'Base' do |sp|
+    s.subspec 'PBBase' do |sp|
         # 相对于 *.podspec 的路径
-        sp.source_files = 'PandoraBox/Classes/Base/**/*.{h,m}'
+        sp.source_files = 'PandoraBox/Classes/PBBase/**/*.{h,m}'
+        sp.public_header_files = 'PandoraBox/Classes/PBBase/**/*.{h}'
     end
     
-    s.subspec 'Categories' do |sp|
-        sp.source_files = 'PandoraBox/Classes/Categories/**/*.{h,m}'
+    s.subspec 'PBCategories' do |sp|
+        sp.source_files = 'PandoraBox/Classes/PBCategories/**/*.{h,m}'
+        sp.public_header_files = 'PandoraBox/Classes/PBCategories/**/*.{h}'
     end
     
     s.subspec 'PBTimerManager' do |sp|
         sp.source_files = 'PandoraBox/Classes/PBTimerManager/**/*.{h,m}'
+        sp.public_header_files = 'PandoraBox/Classes/PBTimerManager/**/*.{h}'
     end
     
     s.subspec 'PBFileTool' do |sp|
         sp.source_files = 'PandoraBox/Classes/PBFileTool/**/*.{h,m}'
+        sp.public_header_files = 'PandoraBox/Classes/PBFileTool/**/*.{h}'
         sp.dependency 'SSZipArchive'
     end
     
