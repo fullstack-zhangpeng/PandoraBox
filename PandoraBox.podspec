@@ -75,30 +75,40 @@ Pod::Spec.new do |s|
     # 所依赖的其他库
     # s.dependency 'AFNetworking', '~> 2.3'
     
+#    s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
+    
     # 默认包含的子库
-    s.default_subspec = 'PBBase','PBCategories','PBTimerManager','PBFileTool'
+    s.default_subspec = 'PBBase','PBCategories','PBTimerManager','PBFileTool','PBLog'
     
     # 子库
-    s.subspec 'PBBase' do |sp|
+    s.subspec 'PBBase' do |ss|
         # 相对于 *.podspec 的路径
-        sp.source_files = 'PandoraBox/Classes/PBBase/**/*.{h,m}'
-        sp.public_header_files = 'PandoraBox/Classes/PBBase/**/*.{h}'
+        ss.source_files = 'PandoraBox/Classes/PBBase/**/*.{h,m}'
+        ss.public_header_files = 'PandoraBox/Classes/PBBase/**/*.{h}'
     end
     
-    s.subspec 'PBCategories' do |sp|
-        sp.source_files = 'PandoraBox/Classes/PBCategories/**/*.{h,m}'
-        sp.public_header_files = 'PandoraBox/Classes/PBCategories/**/*.{h}'
+    s.subspec 'PBCategories' do |ss|
+        ss.source_files = 'PandoraBox/Classes/PBCategories/**/*.{h,m}'
+        ss.public_header_files = 'PandoraBox/Classes/PBCategories/**/*.{h}'
     end
     
-    s.subspec 'PBTimerManager' do |sp|
-        sp.source_files = 'PandoraBox/Classes/PBTimerManager/**/*.{h,m}'
-        sp.public_header_files = 'PandoraBox/Classes/PBTimerManager/**/*.{h}'
+    s.subspec 'PBTimerManager' do |ss|
+        ss.source_files = 'PandoraBox/Classes/PBTimerManager/**/*.{h,m}'
+        ss.public_header_files = 'PandoraBox/Classes/PBTimerManager/**/*.{h}'
     end
     
-    s.subspec 'PBFileTool' do |sp|
-        sp.source_files = 'PandoraBox/Classes/PBFileTool/**/*.{h,m}'
-        sp.public_header_files = 'PandoraBox/Classes/PBFileTool/**/*.{h}'
-        sp.dependency 'SSZipArchive'
+    s.subspec 'PBFileTool' do |ss|
+        ss.source_files = 'PandoraBox/Classes/PBFileTool/**/*.{h,m}'
+        ss.public_header_files = 'PandoraBox/Classes/PBFileTool/**/*.{h}'
+        ss.dependency 'SSZipArchive'
+    end
+    
+    s.subspec 'PBLog' do |ss|
+        ss.source_files = 'PandoraBox/Classes/PBLog/**/*.{h,m}'
+        ss.public_header_files = 'PandoraBox/Classes/PBLog/**/*.{h}'
+        ss.vendored_libraries = 'PandoraBox/Classes/PBLog/mars.framework'
+        ss.libraries = 'z','resolv.9','c++'
+        ss.frameworks = 'CoreTelephony','SystemConfiguration','CoreGraphics'
     end
     
     # 需要排除的文件
