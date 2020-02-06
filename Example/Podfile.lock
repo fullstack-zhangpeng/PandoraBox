@@ -3,13 +3,13 @@ PODS:
     - PandoraBox/PBBase (= 0.3.0)
     - PandoraBox/PBCategories (= 0.3.0)
     - PandoraBox/PBFileTool (= 0.3.0)
-    - PandoraBox/PBLog (= 0.3.0)
+    - PandoraBox/PBLabel (= 0.3.0)
     - PandoraBox/PBTimerManager (= 0.3.0)
   - PandoraBox/PBBase (0.3.0)
   - PandoraBox/PBCategories (0.3.0)
   - PandoraBox/PBFileTool (0.3.0):
     - SSZipArchive
-  - PandoraBox/PBLog (0.3.0)
+  - PandoraBox/PBLabel (0.3.0)
   - PandoraBox/PBTimerManager (0.3.0)
   - SSZipArchive (2.2.2)
 
@@ -17,7 +17,7 @@ DEPENDENCIES:
   - PandoraBox (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - SSZipArchive
 
 EXTERNAL SOURCES:
@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PandoraBox: 8463c2d7b06a312c91c50890607cbb6f57b7f469
+  PandoraBox: d5fee7c2ad1cd65754c7b533a7c9ec6d79a3180e
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
 
 PODFILE CHECKSUM: 3d4c919dc3aea2ca84f7d240cef7452f551ecb8d

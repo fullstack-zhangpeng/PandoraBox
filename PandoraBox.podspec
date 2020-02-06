@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
 #    s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
     
     # 默认包含的子库
-    s.default_subspec = 'PBBase','PBCategories','PBTimerManager','PBFileTool','PBLog'
+    s.default_subspec = 'PBBase','PBCategories','PBTimerManager','PBFileTool','PBLabel'
     
     # 子库
     s.subspec 'PBBase' do |ss|
@@ -103,12 +103,17 @@ Pod::Spec.new do |s|
         ss.dependency 'SSZipArchive'
     end
     
-    s.subspec 'PBLog' do |ss|
-        ss.source_files = 'PandoraBox/Classes/PBLog/**/*.{h,m}'
-        ss.public_header_files = 'PandoraBox/Classes/PBLog/**/*.{h}'
-        ss.vendored_libraries = 'PandoraBox/Classes/PBLog/mars.framework'
-        ss.libraries = 'z','resolv.9','c++'
-        ss.frameworks = 'CoreTelephony','SystemConfiguration','CoreGraphics'
+#    s.subspec 'PBLog' do |ss|
+#        ss.source_files = 'PandoraBox/Classes/PBLog/**/*.{h,m}'
+#        ss.public_header_files = 'PandoraBox/Classes/PBLog/**/*.{h}'
+#        ss.vendored_libraries = 'PandoraBox/Classes/PBLog/mars.framework'
+#        ss.libraries = 'z','resolv.9','c++'
+#        ss.frameworks = 'CoreTelephony','SystemConfiguration','CoreGraphics'
+#    end
+    
+    s.subspec 'PBLabel' do |ss|
+        ss.source_files = 'PandoraBox/Classes/PBLabel/**/*.{h,m}'
+        ss.public_header_files = 'PandoraBox/Classes/PBLabel/**/*.{h}'
     end
     
     # 需要排除的文件
